@@ -1,0 +1,78 @@
+@import "shared/_flexbox";
+@import "shared/_variables";
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+/* GENERAL STYLES */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rajdhani', sans-serif;
+  background-color: $light-grey;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+h1, h2, h3{
+	text-transform: uppercase;
+}
+
+.header{
+	background: $white url("../img/headerImg.png") no-repeat fixed center; 
+	height: 250px;
+}
+
+.footer{
+	@include flexbox();
+	@include justify-content(space-evenly);
+}
+
+/* CONTENT */
+.about{
+	.about__img{
+	
+	}
+	.about__labels{
+		.label{
+			padding: 15px 20px;
+		}
+
+	}
+}
+≈
+
+
+/* ---------------- STRUCTURE ---------------- */
+.header, .footer {
+  padding: 10px;
+}
+
+.main {
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.content, .navbar {
+  padding: 10px;
+}
+
+.navbar a {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .main {
+  	@include flex-direction(row);
+  }
+
+  .content {
+    @include flex(1);
+  }
+
+  .navbar {
+    width: 180px;
+  }
+}
+/* -------------- STRUCTURE END -------------- */
