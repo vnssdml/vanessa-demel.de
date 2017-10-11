@@ -9,10 +9,14 @@ body {
   padding: 0;
   font-family: 'Rajdhani', sans-serif;
   background-color: $light-grey;
+  font-size: 18px;
 }
 
 p {
   margin: 0 0 10px 0;
+}
+a{
+  color: $red;
 }
 
 h1, h2, h3{
@@ -20,24 +24,65 @@ h1, h2, h3{
 }
 
 .header{
-	background: $white url("../img/headerImg.png") no-repeat fixed center; 
-	height: 250px;
+  background-image: url('../img/headerImg.png');
+  background-repeat:no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  height: 250px;
+}
+
+.navbar{
+  margin-top: -170px;
+  width: 135px;
+  padding: 20px;
+
+  a{
+    @include align-items(center);
+    @include flexbox();
+    font-size: 18px;
+    background-color: $light-green;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.content{
+  padding: 80px 110px;
 }
 
 .footer{
-	@include flexbox();
-	@include justify-content(space-evenly);
+  @include flexbox();
+  @include justify-content(space-evenly);
+  background-color: $dark-red;
+  color: $white;
 }
 
 /* CONTENT */
 .about{
-	.about__img{
-	
+	.about__image{
+      img{
+        position: relative;
+        z-index: 1;
+        max-width:100%;
+        height:auto;
+        float: left;
+      }
+
 	}
 	.about__labels{
-		.label{
-			padding: 15px 20px;
-		}
+      display: inline-block;
+      margin: 90px 0 0 -45px; /* TODO: responsiv machen */
+
+      .label{
+        position: relative;
+        z-index: 2;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 15px;
+      }
 
 	}
 }
@@ -54,14 +99,6 @@ h1, h2, h3{
   @include flex-direction(column);
 }
 
-.content, .navbar {
-  padding: 10px;
-}
-
-.navbar a {
-  display: block;
-}
-
 @media screen and (min-width: 600px) {
   .main {
   	@include flex-direction(row);
@@ -69,10 +106,6 @@ h1, h2, h3{
 
   .content {
     @include flex(1);
-  }
-
-  .navbar {
-    width: 180px;
   }
 }
 /* -------------- STRUCTURE END -------------- */
