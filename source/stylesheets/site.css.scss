@@ -50,7 +50,7 @@ h1, h2, h3{
 }
 
 .content{
-  padding: 80px 110px;
+  padding: 0px 20px;
 }
 
 .footer{
@@ -74,19 +74,29 @@ h1, h2, h3{
 	}
 	.about__labels{
       display: inline-block;
-      margin: 90px 0 0 -45px; /* TODO: responsiv machen */
+      margin: 90px 0 0 -50px; /* TODO: responsiv machen */
 
       .label{
         position: relative;
         z-index: 2;
         padding: 10px;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.6);
         margin-bottom: 15px;
       }
 
 	}
 }
-≈
+.cv{
+  .row{
+    @include flexbox();
+    @include flex-direction(column);
+    margin-bottom: 20px;
+  }
+  .col1{
+    font-weight: bold;
+  }
+
+}
 
 
 /* ---------------- STRUCTURE ---------------- */
@@ -109,3 +119,47 @@ h1, h2, h3{
   }
 }
 /* -------------- STRUCTURE END -------------- */
+
+
+
+/* MEDIA QUERIES */
+
+
+@media (min-width: 600px){
+  .content{
+    padding: 20px 50px;
+  }
+
+}
+
+@media (min-width: 800px){
+  .content{
+    padding: 80px 110px;
+  }
+
+
+  /* CONTENT */
+  .cv{
+    .row{
+      @include flex-direction(row);
+    }
+    .col1{
+      @include flex(1 220px);
+    }
+    .col2{
+      @include flex(1 100%);
+    }
+  }
+}
+
+@media (min-width: 800px){
+  .content{
+    padding: 30px 50px;
+  }
+}
+
+@media (min-width: 1000px){
+  .content{
+    padding: 80px 110px;
+  }
+}
