@@ -28,32 +28,74 @@ h1, h2, h3{
   background-repeat:no-repeat;
   background-position: top center;
   background-size: 600px;
-  height: 236px;
+  height: 226px;
 }
 
 .navbar{
-  margin-top: -42px;
+  margin-top: 0px;
 
-  .navbar__desktop{
-    display:none;
+  .show-menu {
+    display: flex;
+    width: 75px;
+    height: 75px;
+    background-color: $rose;
+    color: $white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
   }
 
-  /* mobile nav menu */
-  .navbar__mobile{
+  ul{
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: $light-green;
+    /*display: none;*/
+    visibility: hidden;
+    max-height: 0px;
+    opacity:0;
+    -webkit-transition:opacity 200ms ease-in, max-height 200ms ease-in;
+    -moz-transition:opacity 200ms ease-in, max-height 200ms ease-in;
+    -o-transition:opacity 200ms ease-in, max-height 200ms ease-in;
+    transition:opacity 200ms ease-in, max-height 200ms ease-in;
 
-    .burger{
-      background-color: $rose;
-      color: $white;
-      width: 40px;
-      height: 23px;
-      padding: 18px 10px;
+    li{
+      width: 100%;
+      margin-bottom: 12px;
+      font-size: 22px;
+      padding: 15px 0;
+      border-bottom: 1px solid $white;
+      text-align: center;
 
+      a{
+        width: 100%;
+        text-decoration: none;
+        color: $white;
+      }
+
+      &:last-child{
+        border: 0;
+        margin-bottom: 0;
+      }
     }
+  }
+  input[type=checkbox]{
+    display: none;
+  }
+  input[type=checkbox]:checked ~ #menu{
+    /*display: block;*/
+    visibility: visible;
+    max-height: 800px;
+    opacity: 1;
+
   }
 }
 
 .content{
   padding: 0px 20px;
+  min-height: 550px;
 }
 
 .footer{
@@ -62,10 +104,15 @@ h1, h2, h3{
   background-color: $dark-red;
   color: $white;
   margin-top: 100px;
+  padding: 40px 20px;
 }
 
 /* CONTENT */
 .about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 	.about__image{
       img{
         position: relative;
@@ -78,7 +125,8 @@ h1, h2, h3{
 	}
 	.about__labels{
       display: inline-block;
-      margin: 90px 0 0 -50px; /* TODO: responsiv machen */
+      margin: 40px 0 0 0;
+      width: 100%;
 
       .label{
         position: relative;
@@ -104,9 +152,6 @@ h1, h2, h3{
 
 
 /* ---------------- STRUCTURE ---------------- */
-.header, .footer {
-  padding: 10px;
-}
 
 .main {
   @include flexbox();
@@ -137,34 +182,69 @@ h1, h2, h3{
   }
 
   .content{
-    padding: 20px 50px;
+    padding: 20px 30px;
   }
 
   .navbar {
-    margin-top: 0px;
-    .navbar__desktop{
-      display: block;
-      margin-top: -170px;
-      width: 135px;
-      padding: 20px;
+    margin-top: -100px;
 
-      a{
-        @include align-items(center);
-        @include flexbox();
-        font-size: 18px;
-        background-color: $light-green;
-        height: 100px;
-        padding: 10px;
-        margin-bottom: 10px;
-        color: $black;
-        text-decoration: none;
+    #show-menu{
+      display:none;
+    }
+    .show-menu {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      color: #fff;
+      background: #19c589;
+      text-align: center;
+      padding: 10px 0;
+      display: none;
+
+    }
+
+    ul {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      background-color: transparent;
+
+      li {
+        display:block;
+        border: 0;
+        padding: 0;
+
+        a {
+          @include align-items(center);
+          @include flexbox();
+          font-size: 18px;
+          background-color: $light-green;
+          height: 95px;
+          width: 95px;
+          padding: 15px;
+          margin-bottom: 10px;
+          color: $black;
+          text-decoration: none;
+        }
       }
     }
 
-    .navbar__mobile{
-      display: none;
+  }
+
+  /* CONTENT */
+  .about{
+    display: block;
+
+    flex-direction: column;
+    .about__image img{
+      width: 220px;
+    }
+    .about__labels {
+      margin: 10px 0 0 -50px;
+      width: unset;
     }
   }
+
+
 
 }
 
@@ -184,6 +264,15 @@ h1, h2, h3{
     }
     .col2{
       @include flex(1 100%);
+    }
+  }
+
+  .about{
+    .about__image img{
+      width: unset;
+    }
+    .about__labels {
+      margin: 90px 0 0 -50px;
     }
   }
 }
