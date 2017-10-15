@@ -1,1 +1,4 @@
-// This is where it all goes :)
+  $( document ).ready(function() {
+     $("[data-translate]").jqTranslate('index', { path: '/translations' });
+  });
+

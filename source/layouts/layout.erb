@@ -8,7 +8,9 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title %> || Vanessa Demel</title>
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <%= javascript_include_tag "../js/jquery-3.2.1.min" %>
+    <%= javascript_include_tag "../js/jqueryTranslator.min" %>
+    <%= javascript_include_tag "../js/site" %>
   </head>
   <body>
     <%= partial "partials/header" %>

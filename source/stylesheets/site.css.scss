@@ -25,11 +25,19 @@ h1, h2, h3{
 }
 
 .header{
+  position: relative;
   background-image: url('../img/headerImg.png');
   background-repeat:no-repeat;
   background-position: top center;
   background-size: 600px;
   height: 226px;
+
+  .header__changeLangBtn{
+    position: absolute;
+    right: 50px;
+    top: 300px;
+  }
+
 }
 
 .navbar{
