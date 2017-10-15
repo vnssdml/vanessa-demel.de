@@ -1,6 +1,5 @@
 @import "shared/_flexbox";
 @import "shared/_variables";
-
 @import url('https://fonts.googleapis.com/css?family=Rajdhani');
 
 /* GENERAL STYLES */
@@ -61,7 +60,6 @@ h1, h2, h3{
     margin: 0;
     padding: 10px 20px;
     background-color: $light-green;
-    /*display: none;*/
     visibility: hidden;
     max-height: 0px;
     opacity:0;
@@ -116,7 +114,9 @@ h1, h2, h3{
 
   ul{
     list-style-type: none;
+    padding-left: 0px;
     @include flexbox();
+
     li{
       margin: 0 20px;
       a{
@@ -228,7 +228,6 @@ h1, h2, h3{
       text-align: center;
       padding: 10px 0;
       display: none;
-
     }
 
     ul {
