@@ -41,7 +41,7 @@ page '/*.txt', layout: false
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 # configure :build do
-#    activate :i18n, :mount_at_root => false
+#   activate :i18n, :mount_at_root => false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
