@@ -1,19 +1,20 @@
 {
   "WELCOME_HELLO": "Here There! This page is in progress...",
-  "WELCOME_WHATABOUT": "It is all about me & my life. Just be curious and hang out here a little bit.",
-  "WELCOME_QUESTIONS": "Questions? Write me an <a href='mailto:vnssdml@googlemail.com'>E-Mail</a> or contact me via <a href='https://www.facebook.com/supercalifragilistig3xpialigetisch' target='_blank'>Facebook</a>.",
+  "WELCOME_WHATABOUT": "It is all about <a href='templates/about'>me</a> & my life. Just be curious and hang out here a little bit.",
+  "WELCOME_QUESTIONS": "Questions or suggestions? Write me an <a href='mailto:vnssdml@googlemail.com'>E-Mail</a> or contact me via <a href='https://www.facebook.com/supercalifragilistig3xpialigetisch' target='_blank'>Facebook</a>.",
 
   "ABOUT_HOWOLD": "27 years",
   "ABOUT_STUDENT": "Student",
   "ABOUT_WEBDEVELOPER": "Webdeveloper",
   "ABOUT_WHATILOVE": "♥ sports & creative stuff",
 
-  "RANDOM_INTRO": "Some random stuff. Coming soon.",
+  "RANDOM_INTRO": "Here you can find some random stuff...",
+  "RANDOM_MUSIC": "Enjoy my Playlist ;)",
 
   "ICELAND_INTRO": "Get an impression of our time in Iceland from Dec '16 to Aug '17.<br>Pictures say more than a thousand words.",
   "ICELAND_LINK": "Go to our <a href='http://www.semesteriniceland.com' target='_blank'>Blog</a>!",
 
-  "ABOUT_SECTION1": "For several years I've lived in Darmstadt now. Here I feel like at home, not only because of studying and working. The real reason are my lovely friends, who make my day everytime I feel bad. My hometown is Heusenstamm, where I feel like at home as well. Regularly I'm there to visit family and friends and for my <a href='www.hsgobertshausenheusenstamm.de/'>sport</a>."
+  "ABOUT_SECTION1": "For several years I've lived in Darmstadt now. Here I feel like at home, not only because of studying and working. The real reason are my lovely friends, who make my day everytime I feel bad. My hometown is Heusenstamm, where I feel like at home as well. Regularly I'm there to visit family and friends and for my <a href='http://www.hsgobertshausenheusenstamm.de/' target='_blank'>sport</a>."
 
 }
 

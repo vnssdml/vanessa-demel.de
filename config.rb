@@ -40,9 +40,10 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
+configure :build do
 #   activate :i18n, :mount_at_root => false
 #   activate :minify_css
 #   activate :minify_javascript
-# end
+ activate :directory_indexes
+end
 
