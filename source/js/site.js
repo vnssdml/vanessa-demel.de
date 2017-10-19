@@ -2,3 +2,4 @@
      $("[data-translate]").jqTranslate('index', { path: '/translations' });
   });
 
+
